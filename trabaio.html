@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>aloalo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+            body {
+
+                background-image: url(https://i.ytimg.com/vi/7ghSziUQnhs/maxresdefault.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+        </style>
+      
+    </head>
+    <body>
+       
+        <audio id="musga">
+            <source src="subway.mp3" id="sorce">
+            <source src="uniao.mp3">
+        </audio>
+
+        <button id="botao"> PLAY
+        </button>
+
+        <button id="botao2"> PAUSA </button>
+        <button id="botao3"> PULA </button>
+        <button id="botao4"> MUTA </button>
+        <button id="botao5"> DESMUTA </button>
+        <button id="botao6"> VERIFICA </button>
+        <button id="botao7"> CONTROLES </button>
+        <button id="botao8"> TROCA </button>
+        
+
+        <script>
+
+            botao.onclick = function() {
+
+                musga.play();
+                console.log(musga.playbackRate);
+
+            }
+            botao2.onclick = function() {
+
+                musga.pause();
+
+            }; botao3.onclick = function() {
+                musga.currentTime = musga.currentTime + 5;
+
+
+            }; botao4.onclick = function() {
+                musga.muted = true;
+            }; botao5.onclick = function() {
+                musga.muted = false;
+            }; botao6.onclick = function() {
+                console.log(musga.readyState);
+                console.log(musga.seeking);
+            }; botao7.onclick = function() {
+                musga.controls
+            }; botao8.onclick = function() {
+                musga.load();
+            }
+
+
+        </script>
+
+     
+    </body>
+</html>
