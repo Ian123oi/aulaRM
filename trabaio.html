@@ -39,7 +39,7 @@
         
 
         <script>
-
+            var alo=1;
             botao.onclick = function() {
 
                 musga.play();
@@ -64,7 +64,21 @@
             }; botao7.onclick = function() {
                 musga.controls
             }; botao8.onclick = function() {
+                
+
+                if (alo===1) {
+                musga.src = "uniao.mp3";
                 musga.load();
+                musga.play();
+                alo=2;
+                
+            } else if (alo===2) {
+                musga.src = "subway.mp3";
+                musga.load();
+                musga.play();
+                alo=1;
+                
+            }
             }
 
 
