@@ -37,6 +37,8 @@
         <button id="botao6"> VERIFICA </button>
         <button id="botao7"> CONTROLES </button>
         <button id="botao8"> TROCA </button>
+        <button id="botao9"> DURAÇÃO </button>
+        <button id="acaba"> acaba </button>
         
 
         <script>
@@ -80,7 +82,24 @@
                 alo=1;
                 
             }
-            }
+            }; botao9.onclick = function() {
+
+                var duracao = (musga.duration/60).toFixed(2);
+                alert (duracao);
+
+            }; acaba.onclick = function() {
+
+                musga.currentTime = musga.duration - 2;
+                
+
+            };   musga.onended = function() {
+
+                alert ("CABOOOOOOO");
+                musga.src = "uniao.mp3";
+                musga.load();
+                musga.play();
+
+            };
 
 
         </script>
